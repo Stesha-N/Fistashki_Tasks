@@ -2,9 +2,9 @@
 import pandas as pd
 df = pd.read_excel('intro_dataset.xlsx')
 total = df['Апельсины'].sum()
-print ("Продано всего апельсинов:", Total)
+print ("Продано всего апельсинов:", total)
 result = '\n'.join(list(df[df['Мандарины'] == df['Мандарины'].max()]['Дата']))#в случае нескольких месяцев с одинаковыми максимальными значениями 
-print ('Месяц, в котором было продано больше всего мандаринов:', Result)
+print ('Месяц, в котором было продано больше всего мандаринов:', result)
 #Задание2
 df = pd.read_csv('intro_dataset_2.txt', header=None)
 new_df = df.T
