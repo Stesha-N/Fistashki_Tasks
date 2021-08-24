@@ -33,7 +33,7 @@ print ('TC для всех четырех публикаций:', int(accum_tc))
 
 #Задание 5
 
-with open('C:/Users/User/Desktop/vk_post.txt', encoding = 'UTF-8') as file:
+with open('vk_post.txt', encoding = 'UTF-8') as file:
     text = file.read()
 print ('id автора:', text.split('data-from-id=')[1].split('data-post-id')[0].replace('"', ''))
 print ('текст поста:', text.split('"wall_post_text">')[1].split(':<br><br>')[0])
