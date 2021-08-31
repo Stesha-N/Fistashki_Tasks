@@ -1,7 +1,7 @@
 #Задание1
 
 import pandas as pd
-data = pd.read_excel(r'C:\Users\User\Desktop\dataset_lesson2.xlsx')
+data = pd.read_excel('dataset_lesson2.xlsx')
 #1.1
 data_list = list(data.T.to_dict().values())
 #1.2
@@ -38,7 +38,7 @@ print('Cреднее ER:', round(ER_sum/len(users), 2))
 
 #Задание 3
 
-with open(r'C:\Users\User\Desktop\followers.txt') as file:
+with open('followers.txt') as file:
     text = file.read()
 #3.1
 data = text.split('<a href="https://www.instagram.com/')
@@ -66,7 +66,7 @@ print("общее количество подписчиков {} и средни
 #Задание 5
 
 import pyexcel
-campaigns = pyexcel.get_records(file_name=r"C:\Users\User\Desktop\dataset_lesson2_2.xlsx", name_columns_by_row=0)
+campaigns = pyexcel.get_records(file_name="dataset_lesson2_2.xlsx", name_columns_by_row=0)
 accum_impressions = 0
 accum_spend = 0
 for campaign in campaigns:
