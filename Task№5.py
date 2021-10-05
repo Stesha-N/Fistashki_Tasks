@@ -1,23 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[99]:
-
-
+#1задание
 import vk
 import time
 vk_api = vk.API(session,  v = '5.131')
-
-
-# In[100]:
-
-
-session = vk.Session(access_token='e41abe202b316df80c5061b661e0b44188a86c63819d11da1c08370d8b9862fbad3c7d65c812ac4396b0c')
-
-
-# In[104]:
-
-
+session = vk.Session(access_token='')
 offset = 0
 member_counts = vk_api.groups.getMembers(group_id = "kult_patrul")['count']
 members_list = []
@@ -34,10 +19,7 @@ while offset <= member_counts:
 print('Количество подписчиков:', len(members_list))
 print(members_list)
 
-
-# In[169]:
-
-
+#2задание
 def get_posts_and_comments(name_group):
     offset = 0
     posts_list = []
@@ -57,15 +39,6 @@ def get_posts_and_comments(name_group):
         offset += 100
         time.sleep(0.5)
     return posts_list
-
-
-# In[170]:
-
-
-get_posts_and_comments('kult_patrul')
-
-
-# In[ ]:
 
 
 
